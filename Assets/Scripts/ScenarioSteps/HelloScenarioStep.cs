@@ -10,7 +10,7 @@ public class HelloScenarioStep : ScenarioStep
     {
       if(number ==0)
         {
-            GamePanelView.Instance.SetHeaderText("Приветствие");
+            GamePanelView.Instance.SetHeaderText(textHolder.HelloHeader);
             GamePanelView.Instance.SetDescriptionText(textHolder.StartText);
             StartCoroutine(EndScenarioTimer());
         }

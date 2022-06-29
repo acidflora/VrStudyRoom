@@ -11,7 +11,7 @@ public class WalkingScenarioStep : ScenarioStep
     {
         if (number == 0)
         {
-            GamePanelView.Instance.SetHeaderText("Передвижение");
+            GamePanelView.Instance.SetHeaderText(textHolder.WalkingHeader);
             GamePanelView.Instance.SetDescriptionText(textHolder.MovingText);
             GamePanelView.Instance.EnableActionTextObject(true);
             GamePanelView.Instance.SetActionText(textHolder.MovingTextDescription);
