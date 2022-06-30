@@ -19,7 +19,13 @@ public class WalkingScenarioStep : ScenarioStep
         {
             canvasPositionChanger.ChangeCanvasPositionToCarpet1();
             outlineContainer.HideAllOutLines();
-            outlineContainer.OutlineObject("Ñarpet2");
+            GamePanelView.Instance.SetActionText(textHolder.MovingTextDescription2);
+              outlineContainer.OutlineObject("Carpet2");
+        }
+        else if(number ==2)
+        {
+            canvasPositionChanger.ChangeCanvasPostitionToStart();
+            outlineContainer.HideAllOutLines();
         }
     }
 }
