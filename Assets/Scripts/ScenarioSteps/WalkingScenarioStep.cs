@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class WalkingScenarioStep : ScenarioStep
 {
-    [SerializeField] private GameObject _keyboard;
-    [SerializeField] private GameObject _mouse;
-    [SerializeField] private GameObject _htc;
     protected override void CheckActions(int number)
     {
         if (number == 0)
@@ -14,14 +11,15 @@ public class WalkingScenarioStep : ScenarioStep
             GamePanelView.Instance.SetHeaderText(textHolder.WalkingHeader);
             GamePanelView.Instance.SetDescriptionText(textHolder.MovingText);
             GamePanelView.Instance.EnableActionTextObject(true);
-            GamePanelView.Instance.SetActionText(textHolder.MovingTextDescription);
-            if (modeController.IsDesktopMode())
-            {
-                _keyboard.SetActive(true);
-                _mouse.SetActive(true);
-            }
-            else
-                _htc.SetActive(true);
+            GamePanelView.Instance.SetActionText(textHolder.MovingTextDescription1);
+            helpInputObject.ShowMovingHelp();
+            outlineContainer.OutlineObject("Ñarpet1");
+        }
+        else if(number == 1)
+        {
+            canvasPositionChanger.ChangeCanvasPositionToCarpet1();
+            outlineContainer.HideAllOutLines();
+            outlineContainer.OutlineObject("Ñarpet2");
         }
     }
 }
