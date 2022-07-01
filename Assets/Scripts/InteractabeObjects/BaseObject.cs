@@ -20,9 +20,11 @@ public class BaseObject : MonoBehaviour, IClickAble, IHoverAble
     [SerializeField] protected Transform helperPos;
     [SerializeField] protected string helperName;
 
+    protected CanvasObjectHelper canvasObjectHelper;
+
     protected virtual void Start()
     {
-
+        canvasObjectHelper = FindObjectOfType<CanvasObjectHelper>();
     }
 
     public virtual void OnClicked(InteractHand interactHand)
@@ -31,24 +33,22 @@ public class BaseObject : MonoBehaviour, IClickAble, IHoverAble
     }
     public virtual void OnHoverIn(InteractHand interactHand)
     {
-        //if (helperPos != null)
-        //    canvasHelper.ShowTextHelper(helperName, helperPos);
+        if (helperPos != null)
+            canvasObjectHelper.ShowTextHelper(helperName, helperPos);
         if (outlineObjects != null)
             foreach (var obj in outlineObjects)
             {
-                obj.enabled = true;
                 obj.OutlineWidth = 3;
             }
     }
 
     public virtual void OnHoverOut(InteractHand interactHand)
     {
-        //if (helperPos != null)
-        //    canvasHelper.HidetextHelper();
+        if (helperPos != null)
+            canvasObjectHelper.HidetextHelper();
         if (outlineObjects != null)
             foreach (var obj in outlineObjects)
             {
-                obj.enabled = false;
                 obj.OutlineWidth = 0;
             }
     }
