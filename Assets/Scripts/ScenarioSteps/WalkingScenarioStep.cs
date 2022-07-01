@@ -1,3 +1,4 @@
+using AosSdk.Core.Player;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,7 @@ public class WalkingScenarioStep : ScenarioStep
     {
         if (number == 0)
         {
+            Player.Instance.CanMove = true;
             GamePanelView.Instance.SetHeaderText(textHolder.WalkingHeader);
             GamePanelView.Instance.SetDescriptionText(textHolder.MovingText);
             GamePanelView.Instance.EnableActionTextObject(true);
@@ -24,8 +26,8 @@ public class WalkingScenarioStep : ScenarioStep
         }
         else if(number ==2)
         {
-            canvasPositionChanger.ChangeCanvasPostitionToStart();
             outlineContainer.HideAllOutLines();
+            EndScenarioStepEvent?.Invoke();
         }
     }
 }

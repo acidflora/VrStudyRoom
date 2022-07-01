@@ -1,3 +1,4 @@
+using AosSdk.Core.Player;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -10,8 +11,10 @@ public class HelloScenarioStep : ScenarioStep
     {
       if(number ==0)
         {
+            Player.Instance.CanMove = false;
             GamePanelView.Instance.SetHeaderText(textHolder.HelloHeader);
             GamePanelView.Instance.SetDescriptionText(textHolder.StartText);
+            teleportController.TeleportToStartPosition();
             StartCoroutine(EndScenarioTimer());
         }
     }

@@ -15,11 +15,13 @@ public abstract class ScenarioStep : MonoBehaviour
     protected ModeController modeController;
     protected TextHolder textHolder;
     protected HelpInputObject helpInputObject;
+    protected TeleportController teleportController;
     public void Start()
     {
         modeController = FindObjectOfType<ModeController>();
         outlineContainer = FindObjectOfType<OutLineContainer>();
         canvasPositionChanger = FindObjectOfType<GameCanvasPositionChanger>();
+        teleportController = FindObjectOfType<TeleportController>();
         if (modeController.IsDesktopMode())
         {
             textHolder = new TextHolderDesktop();
