@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GrabScenarioStep : ScenarioStep
 {
+    [SerializeField] private ViveStation[] _viveStations;
 
     protected override void CheckActions(int number)
     {
@@ -16,6 +17,10 @@ public class GrabScenarioStep : ScenarioStep
             GamePanelView.Instance.EnableActionTextObject(true);
             GamePanelView.Instance.SetActionText(textHolder.GrabTextAction);
             helpInputObject.ShowGrabHelp();
+            foreach (var viveStation in _viveStations)
+            {
+                viveStation.DisableViveBoxForGrabAction();
+            }
         }
     }
 }
