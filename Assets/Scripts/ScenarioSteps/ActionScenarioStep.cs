@@ -13,12 +13,17 @@ public class ActionScenarioStep : ScenarioStep
             canvasPositionChanger.ChangeCanvasPostitionToStart();
             teleportController.TeleportToStartPosition();
             GamePanelView.Instance.SetHeaderText(textHolder.ActionHeader);
-            GamePanelView.Instance.SetDescriptionText(textHolder.ActionText);
+            GamePanelView.Instance.SetDescriptionText(textHolder.ActionTextDescription);
             GamePanelView.Instance.EnableActionTextObject(true);
-            GamePanelView.Instance.SetActionText(textHolder.ActionTextDescription);
+            GamePanelView.Instance.SetActionText(textHolder.ActionTextAction);
             helpInputObject.ShowActionHelp();
             _table.SetActive(true);
             _actionObjects.SetActive(true);
+        }
+        else if(number ==1)
+        {
+            _table.SetActive(false);
+            EndScenarioStepEvent?.Invoke();
         }
     }
 }

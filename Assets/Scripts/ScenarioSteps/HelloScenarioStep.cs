@@ -13,7 +13,7 @@ public class HelloScenarioStep : ScenarioStep
         {
             Player.Instance.CanMove = false;
             GamePanelView.Instance.SetHeaderText(textHolder.HelloHeader);
-            GamePanelView.Instance.SetDescriptionText(textHolder.StartText);
+            GamePanelView.Instance.SetDescriptionText(textHolder.StartTextDescription);
             teleportController.TeleportToStartPosition();
             StartCoroutine(EndScenarioTimer());
         }

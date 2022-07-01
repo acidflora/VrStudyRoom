@@ -13,7 +13,8 @@ public class TeleportController : MonoBehaviour
     public void TeleportToStartPosition()
     {
         _cameraFlash.CameraFlashStart();
-        Player.Instance.TeleportTo(_startPosition);
+        _descPlayer.transform.position = new Vector3(_startPosition.transform.position.x, _descPlayer.transform.position.y, _startPosition.transform.position.z);
+        _vrPlayer.transform.position = new Vector3(_startPosition.transform.position.x, _vrPlayer.transform.position.y, _startPosition.transform.position.z);
         _descPlayer.transform.rotation = _startPosition.rotation;
         _vrPlayer.transform.rotation = _startPosition.rotation;
     }

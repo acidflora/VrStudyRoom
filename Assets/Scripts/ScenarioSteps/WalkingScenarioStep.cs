@@ -11,9 +11,9 @@ public class WalkingScenarioStep : ScenarioStep
         {
             Player.Instance.CanMove = true;
             GamePanelView.Instance.SetHeaderText(textHolder.WalkingHeader);
-            GamePanelView.Instance.SetDescriptionText(textHolder.MovingText);
+            GamePanelView.Instance.SetDescriptionText(textHolder.MovingTextDescription);
             GamePanelView.Instance.EnableActionTextObject(true);
-            GamePanelView.Instance.SetActionText(textHolder.MovingTextDescription1);
+            GamePanelView.Instance.SetActionText(textHolder.MovingTextAction1);
             helpInputObject.ShowMovingHelp();
             outlineContainer.OutlineObject("Ñarpet1");
         }
@@ -21,7 +21,7 @@ public class WalkingScenarioStep : ScenarioStep
         {
             canvasPositionChanger.ChangeCanvasPositionToCarpet1();
             outlineContainer.HideAllOutLines();
-            GamePanelView.Instance.SetActionText(textHolder.MovingTextDescription2);
+            GamePanelView.Instance.SetActionText(textHolder.MovingTextAction2);
               outlineContainer.OutlineObject("Carpet2");
         }
         else if(number ==2)
