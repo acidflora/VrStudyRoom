@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0af2b1e4317e2fa45ae6121df5380749, type: 3}
   m_Name: AosSDKSettings
   m_EditorClassIdentifier: 
-  launchMode: 1
+  launchMode: 0
   socketPort: 8080
   movementType: 2
   teleportArcOffset: {x: 0, y: -0.2, z: 0}
@@ -23,8 +23,8 @@ MonoBehaviour:
   mouseLookSpeed: 0.1
   mouseLookXLimit: 80
   crossHairSizeMultiplier: 1
-  vrInteractDistance: 1.5
-  desktopInteractDistance: 1.5
+  vrInteractDistance: 1
+  desktopInteractDistance: 2
   desktopGrabMinZoomDistance: 0.5
   desktopGrabMaxZoomDistance: 2
   hideHandOnGrab: 1

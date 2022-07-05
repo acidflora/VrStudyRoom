@@ -44,6 +44,8 @@ namespace AosSdk.Examples
         {
             if(other.TryGetComponent(out ViveStation viveStation))
             {
+                HandRendererEnabler enabler = FindObjectOfType<HandRendererEnabler>();
+                enabler.EnablaHands();
                 viveStation.EnableViveBox();
                 Destroy(gameObject);
             }
