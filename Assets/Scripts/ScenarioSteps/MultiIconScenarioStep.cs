@@ -5,6 +5,7 @@ using UnityEngine;
 public class MultiIconScenarioStep : ScenarioStep
 {
     [SerializeField] private GameObject _table;
+    [SerializeField] private GameObject _printer;
     protected override void CheckActions(int number)
     {
 
@@ -16,6 +17,7 @@ public class MultiIconScenarioStep : ScenarioStep
             GamePanelView.Instance.SetActionText(textHolder.MultiIconTextAction);
             helpInputObject.ShowActionHelp();
             _table.SetActive(true);
+            _printer.SetActive(true);
         }
     }
 
