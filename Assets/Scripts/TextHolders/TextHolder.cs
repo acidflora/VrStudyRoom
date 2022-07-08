@@ -15,7 +15,7 @@ public class TextHolder
     public string WalkingHeader { get; private set; } = "Передвижение";
     public string HelloHeader { get; private set; } = "Приветствие";
     public string ActionHeader { get; private set; } = "Взаимодействие с предметами";
-    public string GrabHeader { get; private set; } = "Граб прдметов";
+    public string GrabHeader { get; private set; } = "Граб предметов";
     public string IconHeader { get; private set; } = "Взаимодействие с иконками";
     public virtual void SetText()
     {
