@@ -820,6 +820,52 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 338341b6ab782884babe72a90feac2ec, type: 3}
+--- !u!1 &221124691
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 221124692}
+  - component: {fileID: 221124693}
+  m_Layer: 0
+  m_Name: MultiIconScenarioStep
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &221124692
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221124691}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1990966199}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &221124693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221124691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea85c938d1e702443a19d9d852991144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vrSoundPlayer: {fileID: 904049150}
+  desktopSoundPlayer: {fileID: 866994225}
+  _table: {fileID: 1531412694}
 --- !u!1 &227441153
 GameObject:
   m_ObjectHideFlags: 0
@@ -13170,6 +13216,7 @@ Transform:
   - {fileID: 2045399728}
   - {fileID: 675088372}
   - {fileID: 337054326}
+  - {fileID: 221124692}
   m_Father: {fileID: 1013475865}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13191,6 +13238,7 @@ MonoBehaviour:
   - {fileID: 2045399727}
   - {fileID: 675088373}
   - {fileID: 337054327}
+  - {fileID: 221124693}
 --- !u!1 &1997783660
 GameObject:
   m_ObjectHideFlags: 0

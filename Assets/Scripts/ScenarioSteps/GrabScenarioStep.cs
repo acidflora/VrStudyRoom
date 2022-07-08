@@ -15,8 +15,8 @@ public class GrabScenarioStep : ScenarioStep
             teleportController.TeleportToStartPosition();
             GamePanelView.Instance.SetHeaderText(textHolder.GrabHeader);
             GamePanelView.Instance.SetDescriptionText(textHolder.GrabTextDescription);
-            GamePanelView.Instance.EnableActionTextObject(true);
             GamePanelView.Instance.SetActionText(textHolder.GrabTextAction);
+            GamePanelView.Instance.EnableActionTextObject(true);
             helpInputObject.ShowGrabHelp();
             _cupboard.GetComponent<Collider>().enabled = true;
             foreach (var viveStation in _viveStations)
