@@ -6,9 +6,12 @@ public class HandRendererEnabler : MonoBehaviour
 {
     [SerializeField] private GameObject _leftHand;
     [SerializeField] private GameObject _rightHand;
-    public void EnablaHands()
+    public void EnablaHands(bool value)
     {
-        _leftHand.GetComponent<SkinnedMeshRenderer>().enabled = true;
+        if (value)
         _rightHand.GetComponent<SkinnedMeshRenderer>().enabled = true;
+        else
+            _leftHand.GetComponent<SkinnedMeshRenderer>().enabled = true;
+
     }
 }

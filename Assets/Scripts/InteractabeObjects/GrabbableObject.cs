@@ -16,10 +16,15 @@ namespace AosSdk.Examples
 
         public bool IsGrabbable { get; set; } = true;
         public bool IsGrabbed { get; set; }
+        private bool _hand;
 
 
         public void OnGrabbed(InteractHand interactHand)
         {
+            if (interactHand == InteractHand.Right)
+                _hand = true;
+            else 
+                _hand = false;
             //_zoomController.CanZoom = false;
             GetComponent<Collider>().isTrigger = false;
             GetComponent<Rigidbody>().isKinematic = false;
@@ -45,7 +50,7 @@ namespace AosSdk.Examples
             if(other.TryGetComponent(out ViveStation viveStation))
             {
                 HandRendererEnabler enabler = FindObjectOfType<HandRendererEnabler>();
-                enabler.EnablaHands();
+                enabler.EnablaHands(_hand);
                 viveStation.EnableViveBox();
                 Destroy(gameObject);
             }
