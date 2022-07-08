@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class IconsScenarioStep : ScenarioStep
 {
+    [SerializeField] private GameObject _studyButtons;
     protected override void CheckActions(int number)
     {
         if (number == 0)
@@ -14,6 +15,13 @@ public class IconsScenarioStep : ScenarioStep
             GamePanelView.Instance.EnableActionTextObject(true);
             GamePanelView.Instance.SetActionText(textHolder.IconTextAction);
             helpInputObject.ShowActionHelp();
+            _studyButtons.SetActive(true);
+            helpInputObject.ShowActionHelp();
+        }
+        else if(number == 1)
+        {
+            helpInputObject.Hide();
+            EndScenarioStepEvent?.Invoke();
         }
     }
 }

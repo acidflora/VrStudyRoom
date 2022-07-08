@@ -6,6 +6,7 @@ public class ActionGrabInvoker : MonoBehaviour
 {
     [SerializeField] private ActionObject[] _actionObjects;
     [SerializeField] private ViveStation[] _viveStations;
+    [SerializeField] private StudyButton[] _studyButtons;
     private int _actions;
     private int _grabs;
     void Start()
@@ -18,6 +19,10 @@ public class ActionGrabInvoker : MonoBehaviour
         {
             grab.ViveBoxDeliveredEvent += AllGrabbedObjectsDelivered;
         }
+        foreach (var studyButton in _studyButtons)
+        {
+            studyButton.StyduButonClicked += AllActionObjectsClicked;
+        }
     }
     private void AllActionObjectsClicked(int value)
     {
@@ -26,6 +31,7 @@ public class ActionGrabInvoker : MonoBehaviour
         {
             ScenarioStepController controller = FindObjectOfType<ScenarioStepController>();
             controller.GetCurrentScenarioStep().StartAction();
+            _actions = 0;
         }
     }
     private void AllGrabbedObjectsDelivered(int value)
@@ -36,7 +42,6 @@ public class ActionGrabInvoker : MonoBehaviour
             ScenarioStepController controller = FindObjectOfType<ScenarioStepController>();
             controller.GetCurrentScenarioStep().StartAction();
         }
-
     }
 
 }

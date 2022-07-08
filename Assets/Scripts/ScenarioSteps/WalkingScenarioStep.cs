@@ -27,6 +27,7 @@ public class WalkingScenarioStep : ScenarioStep
         else if(number ==2)
         {
             outlineContainer.HideAllOutLines();
+            helpInputObject.Hide();
             EndScenarioStepEvent?.Invoke();
         }
     }

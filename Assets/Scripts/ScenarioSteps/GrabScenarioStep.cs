@@ -26,6 +26,7 @@ public class GrabScenarioStep : ScenarioStep
         }
         else if(number==1)
         {
+            helpInputObject.Hide();
             EndScenarioStepEvent?.Invoke();
         }
     }
