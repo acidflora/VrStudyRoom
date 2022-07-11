@@ -13,6 +13,8 @@ public class TextHolder
     public string IconTextAction;
     public string MultiIconTextDescription;
     public string MultiIconTextAction;
+    public string MeasureIconTextDescription;
+    public string MeasureIconTextAction;
 
     public string WalkingHeader { get; private set; } = "Передвижение";
     public string HelloHeader { get; private set; } = "Приветствие";
@@ -20,6 +22,7 @@ public class TextHolder
     public string GrabHeader { get; private set; } = "Граб предметов";
     public string IconHeader { get; private set; } = "Взаимодействие с иконками";
     public string MultiIconHeader { get; private set; } = "Предметы с несколькими иконками";
+    public string MeasureIconHeader { get; private set; } = "Измерение";
     public virtual void SetText()
     {
 
