@@ -19,6 +19,13 @@ public class MultiIconScenarioStep : ScenarioStep
             _table.SetActive(true);
             _printer.SetActive(true);
         }
+        else if(number ==1)
+        {
+            helpInputObject.Hide();
+            _table.SetActive(false);
+            _printer.SetActive(false);
+            EndScenarioStepEvent?.Invoke();
+        }
     }
 
 }

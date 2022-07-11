@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class InteractablePrinter : InteractableObject
 {
+    public UnityAction PrinterEndActionEvent;
     [SerializeField] private GameObject _cap;
     [SerializeField] private GameObject _cartridge;
     [SerializeField] private GameObject _repairButton;
+    [SerializeField] private RepairPrinterButton _repairPrinterButton;
     public override void StartAction()
     {
         StartCoroutine(OpenCap());
@@ -44,6 +47,6 @@ public class InteractablePrinter : InteractableObject
             x--;
             yield return new WaitForSeconds(0.01f);
         }
-
+        _repairPrinterButton.EndPrinterAction();
     }
 }
