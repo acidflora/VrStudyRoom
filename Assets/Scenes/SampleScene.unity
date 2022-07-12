@@ -6995,9 +6995,9 @@ MonoBehaviour:
   m_fontSize: 0.6
   m_fontSizeBase: 0.6
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 0.2
+  m_fontSizeMax: 0.6
   m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
@@ -14865,6 +14865,7 @@ MonoBehaviour:
   - {fileID: 337054327}
   - {fileID: 221124693}
   - {fileID: 246494140}
+  - {fileID: 1837886037}
 --- !u!1 &1997783660
 GameObject:
   m_ObjectHideFlags: 0
