@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlaceScenarioStep : ScenarioStep
 {
+    [SerializeField] private GameObject _placeTable;
     protected override void CheckActions(int number)
     {
 
@@ -14,10 +15,11 @@ public class PlaceScenarioStep : ScenarioStep
             GamePanelView.Instance.SetDescriptionText(textHolder.PlaceIconTextDescription);
             GamePanelView.Instance.SetActionText(textHolder.PlaceIconTextAction);
             helpInputObject.ShowActionHelp();
+            _placeTable.SetActive(true);
         }
         else if (number == 1)
         {
-
+            EndScenarioStepEvent?.Invoke();
         }
     }
 }
