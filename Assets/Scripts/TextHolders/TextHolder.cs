@@ -11,12 +11,18 @@ public class TextHolder
     public string GrabTextAction;
     public string IconTextDescription;
     public string IconTextAction;
+    public string MapIconTextDescription;
+    public string MapIconTextAction;
+    public string RadioIconTextDescription;
+    public string RadioIconTextAction;
     public string MultiIconTextDescription;
     public string MultiIconTextAction;
     public string MeasureIconTextDescription;
     public string MeasureIconTextAction;
     public string PlaceIconTextDescription;
     public string PlaceIconTextAction;
+    public string MenuTextDescription;
+    public string MenuTextAction;
 
     public string WalkingHeader { get; private set; } = "Передвижение";
     public string HelloHeader { get; private set; } = "Приветствие";
@@ -26,6 +32,7 @@ public class TextHolder
     public string MultiIconHeader { get; private set; } = "Предметы с несколькими иконками";
     public string MeasureIconHeader { get; private set; } = "Измерение";
     public string PlaceIconHeader { get; private set; } = "Место";
+    public string MenuHeader { get; private set; } = "Меню";
     public virtual void SetText()
     {
 

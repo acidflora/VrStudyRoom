@@ -19,6 +19,7 @@ public class PlaceScenarioStep : ScenarioStep
         }
         else if (number == 1)
         {
+            _placeTable.SetActive(false);
             EndScenarioStepEvent?.Invoke();
         }
     }

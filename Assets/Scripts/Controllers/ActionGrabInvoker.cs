@@ -8,8 +8,10 @@ public class ActionGrabInvoker : MonoBehaviour
     [SerializeField] private ViveStation[] _viveStations;
     [SerializeField] private StudyButton[] _studyButtons;
     [SerializeField] private StudyButton[] _studyPrinterButtons;
+    [SerializeField] private MapButton _mapButton;
     private int _actions;
     private int _grabs;
+    private int _map;
     void Start()
     {
         foreach (var action in _actionObjects)
@@ -28,6 +30,18 @@ public class ActionGrabInvoker : MonoBehaviour
         {
             studyButton.StãdyButonClicked += OnAllActionObjectsClicked;
         }
+        _mapButton.MapButtonClickedEvent += OnMapClicked;
+    }
+    private void OnMapClicked(int value)
+    {
+        _map += value;
+        if (_map > 1)
+        {
+            ScenarioStepController controller = FindObjectOfType<ScenarioStepController>();
+            controller.GetCurrentScenarioStep().StartAction();
+            _map = 0;
+        }
+
     }
     private void OnAllActionObjectsClicked(int value)
     {

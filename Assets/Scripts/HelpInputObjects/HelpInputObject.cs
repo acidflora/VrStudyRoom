@@ -27,6 +27,7 @@ public class HelpInputObject : MonoBehaviour
     {
         HideAllDots();
         menuDots.SetActive(true);
+        actionDots.SetActive(true);
     }
     public virtual void Hide()
     {
