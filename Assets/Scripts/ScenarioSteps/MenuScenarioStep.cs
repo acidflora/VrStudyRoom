@@ -6,6 +6,7 @@ public class MenuScenarioStep : ScenarioStep
 {
     [SerializeField] private MenuController _menuController;
     [SerializeField] private GameObject _vrWatch;
+    [SerializeField] private GameObject _vrPlayer;
     protected override void CheckActions(int number)
     {
 
@@ -17,6 +18,7 @@ public class MenuScenarioStep : ScenarioStep
             GamePanelView.Instance.SetActionText(textHolder.MenuTextAction);
             helpInputObject.ShowMenuHelp();
             _menuController.AllowTeleport(true);
+            if(_vrPlayer.activeSelf)
             _vrWatch.SetActive(true);
         }
         else if (number == 1)

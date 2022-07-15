@@ -9,6 +9,7 @@ public class ActionGrabInvoker : MonoBehaviour
     [SerializeField] private StudyButton[] _studyButtons;
     [SerializeField] private StudyButton[] _studyPrinterButtons;
     [SerializeField] private ButtonWithObject[] _buttonsWithObjects;
+    [SerializeField] private OtkazButton _otkButton;
     private int _actions;
     private int _grabs;
     private int _map;
@@ -34,6 +35,7 @@ public class ActionGrabInvoker : MonoBehaviour
         {
             buttonWithObject.MapButtonClickedEvent += OnButtonWithObjectClicked;
         }
+        _otkButton.ButtonPressetEvent += OnRightOtkaz;
     }
     private void OnButtonWithObjectClicked(int value)
     {
@@ -64,6 +66,11 @@ public class ActionGrabInvoker : MonoBehaviour
             ScenarioStepController controller = FindObjectOfType<ScenarioStepController>();
             controller.GetCurrentScenarioStep().StartAction();
         }
+    }
+    private void OnRightOtkaz()
+    {
+        ScenarioStepController controller = FindObjectOfType<ScenarioStepController>();
+        controller.GetCurrentScenarioStep().StartAction();
     }
 
 }

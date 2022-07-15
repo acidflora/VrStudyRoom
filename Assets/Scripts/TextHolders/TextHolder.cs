@@ -33,6 +33,7 @@ public class TextHolder
     public string MeasureIconHeader { get; private set; } = "Измерение";
     public string PlaceIconHeader { get; private set; } = "Место";
     public string MenuHeader { get; private set; } = "Меню";
+    public string EndHeader { get; private set; } = "Обучение завершено";
     public virtual void SetText()
     {
 
