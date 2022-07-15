@@ -7454,7 +7454,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   outlineObjects: []
   helperPos: {fileID: 1957156690}
-  helperName: "\u041F\u043E\u0441\u043C\u043E\u0442\u0440\u0435\u0442\u044C \u0441\u0445\u0435\u043C\u0443"
+  helperName: "\u041F\u043E\u0441\u043C\u043E\u0442\u0440\u0435\u0442\u044C \u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u0430\u0446\u0438\u044E"
   _map: {fileID: 300716086}
 --- !u!212 &549460414
 SpriteRenderer:
