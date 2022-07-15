@@ -20,6 +20,7 @@ public class IconsScenarioStep : ScenarioStep
         }
         else if(number == 1)
         {
+            _studyButtons.SetActive(false);
             helpInputObject.Hide();
             EndScenarioStepEvent?.Invoke();
         }
