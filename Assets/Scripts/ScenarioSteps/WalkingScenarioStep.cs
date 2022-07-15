@@ -21,6 +21,7 @@ public class WalkingScenarioStep : ScenarioStep
         {
             canvasPositionChanger.ChangeCanvasPositionToCarpet1();
             outlineContainer.HideAllOutLines();
+            GamePanelView.Instance.SetDescriptionText("");
             GamePanelView.Instance.SetActionText(textHolder.MovingTextAction2);
               outlineContainer.OutlineObject("Carpet2");
         }

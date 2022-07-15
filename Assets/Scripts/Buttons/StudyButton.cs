@@ -6,10 +6,10 @@ using UnityEngine.Events;
 
 public class StudyButton : BaseButton
 {
-    public UnityAction<int> StãdyButonClicked;
+    public UnityAction<int> StudyButonClicked;
     public override void OnClicked(InteractHand interactHand)
     {
-        StãdyButonClicked?.Invoke(1);
-        gameObject.SetActive(false);
+        StudyButonClicked?.Invoke(1);
+        gameObject.GetComponent<Collider>().enabled = false;
     }
 }

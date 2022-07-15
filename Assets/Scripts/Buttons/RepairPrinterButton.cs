@@ -15,6 +15,6 @@ public class RepairPrinterButton : StudyButton
 
     public void EndPrinterAction()
     {
-        StãdyButonClicked?.Invoke(1);
+        StudyButonClicked?.Invoke(1);
     }
 }

@@ -27,11 +27,11 @@ public class TextHolder
     public string WalkingHeader { get; private set; } = "Передвижение";
     public string HelloHeader { get; private set; } = "Приветствие";
     public string ActionHeader { get; private set; } = "Взаимодействие с предметами";
-    public string GrabHeader { get; private set; } = "Граб предметов";
+    public string GrabHeader { get; private set; } = "Захват предметов";
     public string IconHeader { get; private set; } = "Взаимодействие с иконками";
     public string MultiIconHeader { get; private set; } = "Предметы с несколькими иконками";
-    public string MeasureIconHeader { get; private set; } = "Измерение";
-    public string PlaceIconHeader { get; private set; } = "Место";
+    public string MeasureIconHeader { get; private set; } = " Проведение измерений";
+    public string PlaceIconHeader { get; private set; } = "Объект";
     public string MenuHeader { get; private set; } = "Меню";
     public string EndHeader { get; private set; } = "Обучение завершено";
     public virtual void SetText()

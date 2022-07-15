@@ -25,11 +25,11 @@ public class ActionGrabInvoker : MonoBehaviour
         }
         foreach (var studyButton in _studyButtons)
         {
-            studyButton.StãdyButonClicked += OnAllActionObjectsClicked;
+            studyButton.StudyButonClicked += OnAllActionObjectsClicked;
         }
         foreach (var studyButton in _studyPrinterButtons)
         {
-            studyButton.StãdyButonClicked += OnAllActionObjectsClicked;
+            studyButton.StudyButonClicked += OnAllActionObjectsClicked;
         }
         foreach (var buttonWithObject in _buttonsWithObjects)
         {

@@ -21,7 +21,7 @@ public class StrelkaRotator : MonoBehaviour
         if(value)
         {
             float y = -51;
-            while(y<=32)
+            while(y<=15)
             {
                 var temp = _strelka.transform.rotation.eulerAngles;
                 temp.y = y;
