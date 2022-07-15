@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class MapButton : BaseButton
+public class ButtonWithObject : BaseButton
 {
     public UnityAction<int> MapButtonClickedEvent;
     [SerializeField] private GameObject _map;
