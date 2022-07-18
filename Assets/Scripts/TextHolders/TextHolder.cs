@@ -30,7 +30,7 @@ public class TextHolder
     public string GrabHeader { get; private set; } = "Захват предметов";
     public string IconHeader { get; private set; } = "Взаимодействие с иконками";
     public string MultiIconHeader { get; private set; } = "Предметы с несколькими иконками";
-    public string MeasureIconHeader { get; private set; } = " Проведение измерений";
+    public string MeasureIconHeader { get; private set; } = "Проведение измерений";
     public string PlaceIconHeader { get; private set; } = "Объект";
     public string MenuHeader { get; private set; } = "Меню";
     public string EndHeader { get; private set; } = "Обучение завершено";
