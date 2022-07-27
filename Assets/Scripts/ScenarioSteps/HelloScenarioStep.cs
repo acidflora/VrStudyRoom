@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class HelloScenarioStep : ScenarioStep
 {
+    [SerializeField] private Loader _loader;
 
     protected override void CheckActions(int number)
     {
@@ -13,14 +14,20 @@ public class HelloScenarioStep : ScenarioStep
         {
             Player.Instance.CanMove = false;
             GamePanelView.Instance.SetHeaderText(textHolder.HelloHeader);
-            GamePanelView.Instance.SetDescriptionText(textHolder.StartTextDescription);
+            GamePanelView.Instance.SetDescriptionText(textHolder.HelloDescription);
             teleportController.TeleportToStartPosition();
-            StartCoroutine(EndScenarioTimer());
+            _loader.StartLoading(1);
+        }
+      else if(number==1)
+        {
+            GamePanelView.Instance.SetDescriptionText(textHolder.HelloDescription2);
+            _loader.StartLoading(2);
+        }
+        else if (number == 2)
+        {
+            EndScenarioStepEvent?.Invoke();
         }
     }
-    private IEnumerator EndScenarioTimer()
-    {
-        yield return new WaitForSeconds(5f);
-        EndScenarioStepEvent?.Invoke();
-    }
+
+
 }

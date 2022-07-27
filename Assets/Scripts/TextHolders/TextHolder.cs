@@ -1,7 +1,7 @@
 
 public class TextHolder 
 {
-    public string StartTextDescription;
+    public string HelloDescription;
     public string MovingTextDescription;
     public string MovingTextAction1;
     public string MovingTextAction2;
@@ -26,6 +26,7 @@ public class TextHolder
 
     public string WalkingHeader { get; private set; } = "Передвижение";
     public string HelloHeader { get; private set; } = "Приветствие";
+    public string HelloDescription2 { get; private set; } = "Мы находимся в кванториуме нашего университета. Вам необходимо подготовить наш технопарк к работе. Вам потребуется выполнять несложные задачи. Внимательно следуйте поступающим инструкциям. Приступим!";
     public string ActionHeader { get; private set; } = "Взаимодействие с предметами";
     public string GrabHeader { get; private set; } = "Захват предметов";
     public string IconHeader { get; private set; } = "Взаимодействие с иконками";
