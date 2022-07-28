@@ -40,4 +40,8 @@ public class HelpInputObject : MonoBehaviour
         grabDots.SetActive(false);
         menuDots.SetActive(false);
     }
+    public virtual void ShowInput()
+    {
+
+    }
 }

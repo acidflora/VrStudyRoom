@@ -31,4 +31,10 @@ public class VRHelpInputObject : HelpInputObject
         _htc.SetActive(false);
         _handWatch.SetActive(false);
     }
+    public override void ShowInput()
+    {
+         HideAllDots();
+        _htc.SetActive(true);
+    }
+
 }

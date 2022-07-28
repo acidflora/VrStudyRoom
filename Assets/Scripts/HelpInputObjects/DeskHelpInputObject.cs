@@ -33,4 +33,12 @@ public class DeskHelpInputObject : HelpInputObject
         _keyboard.SetActive(false);
         _mouse.SetActive(false);
     }
+    public override void ShowInput()
+    {
+        _keyboard.SetActive(true);
+        _mouse.SetActive(true);
+        walkingDots.SetActive(true);
+        actionDots.SetActive(true);
+        grabDots.SetActive(true);
+    }
 }
