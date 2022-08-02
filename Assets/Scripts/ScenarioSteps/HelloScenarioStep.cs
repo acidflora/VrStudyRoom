@@ -8,6 +8,7 @@ public class HelloScenarioStep : ScenarioStep
 {
     [SerializeField] private Loader _loader;
     [SerializeField] private GameObject _inputScenarioHelper;
+    [SerializeField] private GameObject _nextActionButton;
 
     protected override void CheckActions(int number)
     {
@@ -37,6 +38,13 @@ public class HelloScenarioStep : ScenarioStep
             GamePanelView.Instance.SetActionText(textHolder.InputTextAction);
         }
         else if (number == 3)
+        {
+            helpInputObject.ShowActionHelp();
+            _nextActionButton.SetActive(true);
+            GamePanelView.Instance.SetDescriptionText(textHolder.FollowTextDescription);
+            GamePanelView.Instance.SetActionText(textHolder.FollowTextAction);
+        }
+      else if(number ==4)
         {
             EndScenarioStepEvent?.Invoke();
         }
