@@ -4,11 +4,12 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class HelloScenarioStep : ScenarioStep
+public class InputScenarioStep : ScenarioStep
 {
     [SerializeField] private Loader _loader;
     [SerializeField] private GameObject _inputScenarioHelper;
     [SerializeField] private GameObject _nextActionButton;
+    [SerializeField] private GameObject _playerActionEventSender;
 
     protected override void CheckActions(int number)
     {
@@ -46,6 +47,14 @@ public class HelloScenarioStep : ScenarioStep
         }
       else if(number ==4)
         {
+            GamePanelView.Instance.SetDescriptionText(textHolder.InputTestTextDescription);
+            GamePanelView.Instance.SetActionText(textHolder.InputTestTextAction);
+            _playerActionEventSender.SetActive(true);
+
+        }
+      else if(number ==5)
+        {
+            _playerActionEventSender.SetActive(false);
             EndScenarioStepEvent?.Invoke();
         }
     }

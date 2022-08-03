@@ -12,7 +12,7 @@ public class GrabScenarioStep : ScenarioStep
         if (number == 0)
         {
             canvasPositionChanger.ChangeCanvasPostitionToStart();
-            teleportController.TeleportToStartPosition();
+            teleportController.TeleportToActionPosition();
             GamePanelView.Instance.SetHeaderText(textHolder.GrabHeader);
             GamePanelView.Instance.SetDescriptionText(textHolder.GrabTextDescription);
             GamePanelView.Instance.SetActionText(textHolder.GrabTextAction);

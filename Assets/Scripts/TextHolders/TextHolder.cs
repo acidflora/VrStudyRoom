@@ -6,6 +6,8 @@ public class TextHolder
     public string MovingTextAction1;
     public string InputTextDescription;
     public string InputTextAction;
+    public string InputTestTextDescription;
+    public string InputTestTextAction;
     public string FollowTextDescription;
     public string FollowTextAction;
     public string MovingTextAction2;

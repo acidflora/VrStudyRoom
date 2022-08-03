@@ -11,7 +11,7 @@ public class ActionScenarioStep : ScenarioStep
         if (number == 0)
         {
             canvasPositionChanger.ChangeCanvasPostitionToStart();
-            teleportController.TeleportToStartPosition();
+            teleportController.TeleportToActionPosition();
             GamePanelView.Instance.SetHeaderText(textHolder.ActionHeader);
             GamePanelView.Instance.SetDescriptionText(textHolder.ActionTextDescription);
             GamePanelView.Instance.EnableActionTextObject(true);

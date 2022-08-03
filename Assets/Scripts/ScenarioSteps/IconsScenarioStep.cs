@@ -9,7 +9,7 @@ public class IconsScenarioStep : ScenarioStep
     {
         if (number == 0)
         {
-            teleportController.TeleportToStartPosition();
+            teleportController.TeleportToActionPosition();
             GamePanelView.Instance.SetHeaderText(textHolder.IconHeader);
             GamePanelView.Instance.SetDescriptionText(textHolder.IconTextDescription);
             GamePanelView.Instance.EnableActionTextObject(true);

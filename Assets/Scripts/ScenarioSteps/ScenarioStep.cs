@@ -51,4 +51,8 @@ public abstract class ScenarioStep : MonoBehaviour
     protected virtual void CheckActions(int number)
     {
     }
+    public HelpInputObject GetCurrentHelpInput()
+    {
+        return helpInputObject;
+    }
 }

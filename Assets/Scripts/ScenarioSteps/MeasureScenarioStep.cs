@@ -12,7 +12,7 @@ public class MeasureScenarioStep : ScenarioStep
 
         if (number == 0)
         {
-            teleportController.TeleportToStartPosition();
+            teleportController.TeleportToActionPosition();
             GamePanelView.Instance.SetHeaderText(textHolder.MeasureIconHeader);
             GamePanelView.Instance.SetDescriptionText(textHolder.MeasureIconTextDescription);
             GamePanelView.Instance.SetActionText(textHolder.MeasureIconTextAction);

@@ -11,7 +11,7 @@ public class MultiIconScenarioStep : ScenarioStep
 
         if(number==0)
         {
-            teleportController.TeleportToStartPosition();
+            teleportController.TeleportToActionPosition();
             GamePanelView.Instance.SetHeaderText(textHolder.MultiIconHeader);
             GamePanelView.Instance.SetDescriptionText(textHolder.MultiIconTextDescription);
             GamePanelView.Instance.SetActionText(textHolder.MultiIconTextAction);

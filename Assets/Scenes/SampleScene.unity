@@ -303,7 +303,7 @@ GameObject:
   - component: {fileID: 28759100}
   - component: {fileID: 28759101}
   m_Layer: 0
-  m_Name: HelloScanarioStep
+  m_Name: InputScenarioStep
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -340,6 +340,7 @@ MonoBehaviour:
   _loader: {fileID: 442272420}
   _inputScenarioHelper: {fileID: 1762224909}
   _nextActionButton: {fileID: 234774898}
+  _playerActionEventSender: {fileID: 176511528}
 --- !u!1 &37782884
 GameObject:
   m_ObjectHideFlags: 0
@@ -906,6 +907,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &106232604
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 106232605}
+  - component: {fileID: 106232606}
+  m_Layer: 0
+  m_Name: InputTest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &106232605
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106232604}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1013475865}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &106232606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106232604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5769596a542eed4eb1bd1759d18bd73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _light: {fileID: 705507994}
+  _scnerioController: {fileID: 1990966200}
+  _playerActionEventSender: {fileID: 176511529}
 --- !u!1001 &108734557
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1281,6 +1328,169 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _outlineCore: {fileID: 149688168}
   _viveBox: {fileID: 1754966820}
+--- !u!1 &176511528
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 176511530}
+  - component: {fileID: 176511529}
+  m_Layer: 0
+  m_Name: PlayerActionEventSender
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &176511529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176511528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e76162d25c5bb14f87b26c615608706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mouseLeftButton:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Mouse Left Button
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: deff4bb3-1747-4af1-a3c0-6cfe149d73a8
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 1546419393311994163, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  _mouseRightButton:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Mouse Right Button
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: c44c4350-be07-4852-bac5-25c6a6e5aecd
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -5913574606752565463, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  _wasdButton:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Wasd Button
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: b61994f2-a75b-4bb5-bdb4-247c08fc7e7b
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 3060870262189715448, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  _middleButton:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Middle Button
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 8fe6dc11-ce0d-4710-93f3-1837533dd363
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -5164502503691619372, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  _triggerLButton:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Trigger L Button
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 876c95dc-8e37-4958-9467-0ae0e585820f
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -6131295136447488360, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  _sideLButton:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Side L Button
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: ef0fe0ab-e6d2-4769-ab92-813875e50a7b
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 737890489006591557, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  _circleLButton:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Circle L Button
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 4680aea2-e930-4047-b5c4-749df3a34a1e
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 6972639530819350904, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  _triggerRButton:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Trigger R Button
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 6403ecef-2676-43f4-b22d-04788df8ed26
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 187161793506945269, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  _sideRButton:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Side R Button
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 148cb38b-e3f8-4c2d-8471-d9b6db6607f3
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 2307464322626738743, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  _circleRButton:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Circle R Button
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 2f3d7dbb-1571-44b6-90e3-5b8c19c765b8
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -8198699208435500284, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+--- !u!4 &176511530
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176511528}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1013475865}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &201911202
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6127,6 +6337,7 @@ Transform:
   m_Children:
   - {fileID: 514509801}
   - {fileID: 1991958416}
+  - {fileID: 543427630}
   m_Father: {fileID: 1013475865}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6146,6 +6357,7 @@ MonoBehaviour:
   _vrPlayer: {fileID: 861514238}
   _startPosition: {fileID: 514509801}
   _menuPosition: {fileID: 1991958416}
+  _actionPosition: {fileID: 543427630}
   _cameraFlash: {fileID: 4804166758606223757}
 --- !u!1 &409933730
 GameObject:
@@ -7118,7 +7330,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 514509800}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.3, y: -0.5, z: 9.195}
+  m_LocalPosition: {x: 5.3, y: -0.5, z: 9.991}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 405163738}
@@ -7205,6 +7417,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 525427857}
   m_Mesh: {fileID: -4090381457267059467, guid: e694bd49e6a3841429fb275993541d6b, type: 3}
+--- !u!1 &543427629
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 543427630}
+  m_Layer: 2
+  m_Name: ActionPosistion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &543427630
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543427629}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.3, y: -0.5, z: 9.679}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 405163738}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &549460410
 GameObject:
   m_ObjectHideFlags: 0
@@ -10610,7 +10852,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7969288616097644897, guid: 0ca0918b4ef944d268e55ca0c315c5d2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.43
+      value: 3.008
       objectReference: {fileID: 0}
     - target: {fileID: 7969288616097644897, guid: 0ca0918b4ef944d268e55ca0c315c5d2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -11111,6 +11353,8 @@ Transform:
   - {fileID: 795430610}
   - {fileID: 1642564330}
   - {fileID: 1940844494}
+  - {fileID: 176511530}
+  - {fileID: 106232605}
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11438,6 +11682,7 @@ MonoBehaviour:
   vrSoundPlayer: {fileID: 904049150}
   desktopSoundPlayer: {fileID: 866994225}
   _actionsScreen: {fileID: 1734457226}
+  _menuController: {fileID: 1642564331}
 --- !u!1 &1068451554 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8210995429331955966, guid: e694bd49e6a3841429fb275993541d6b, type: 3}

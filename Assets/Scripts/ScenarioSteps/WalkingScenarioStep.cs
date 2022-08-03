@@ -10,6 +10,7 @@ public class WalkingScenarioStep : ScenarioStep
         if (number == 0)
         {
             Player.Instance.CanMove = true;
+            teleportController.TeleportToStartPosition();
             GamePanelView.Instance.SetHeaderText(textHolder.WalkingHeader);
             GamePanelView.Instance.SetDescriptionText(textHolder.MovingTextDescription);
             GamePanelView.Instance.EnableActionTextObject(true);

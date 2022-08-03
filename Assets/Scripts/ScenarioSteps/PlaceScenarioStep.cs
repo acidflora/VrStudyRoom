@@ -10,7 +10,7 @@ public class PlaceScenarioStep : ScenarioStep
 
         if (number == 0)
         {
-            teleportController.TeleportToStartPosition();
+            teleportController.TeleportToActionPosition();
             GamePanelView.Instance.SetHeaderText(textHolder.PlaceIconHeader);
             GamePanelView.Instance.SetDescriptionText(textHolder.PlaceIconTextDescription);
             GamePanelView.Instance.SetActionText(textHolder.PlaceIconTextAction);
