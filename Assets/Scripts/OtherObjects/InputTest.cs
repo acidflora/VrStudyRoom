@@ -12,6 +12,7 @@ public class InputTest : MonoBehaviour
     private Color _redColor;
     private int _counter;
     private string[] teststrings;
+    private bool _blink = true;
     private void Start()
     {
         _whiteColor = Color.white;
@@ -30,6 +31,7 @@ public class InputTest : MonoBehaviour
     {
         if (value == teststrings[_counter])
         {
+            StartCoroutine(BlinkAllower());
             _counter++;
             if (_counter == 1)
                 _scnerioController.GetCurrentScenarioStep().GetCurrentHelpInput().ShowGrabHelp();
@@ -40,6 +42,7 @@ public class InputTest : MonoBehaviour
         }
         else
         {
+            if(_blink)
             StartCoroutine(LightChanger());
         }
         if(_counter>3)
@@ -53,5 +56,11 @@ public class InputTest : MonoBehaviour
         _light.color = _redColor;
         yield return new WaitForSeconds(0.5f);
         _light.color = _whiteColor;
+    }
+    private IEnumerator BlinkAllower()
+    {
+        _blink = false;
+        yield return new WaitForSeconds(0.5f);
+        _blink = true;
     }
 }

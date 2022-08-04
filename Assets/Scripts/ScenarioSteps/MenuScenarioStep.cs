@@ -7,11 +7,13 @@ public class MenuScenarioStep : ScenarioStep
     [SerializeField] private MenuController _menuController;
     [SerializeField] private GameObject _vrWatch;
     [SerializeField] private GameObject _vrPlayer;
+    [SerializeField] private GameObject _watch;
     protected override void CheckActions(int number)
     {
 
         if (number == 0)
         {
+            _watch.SetActive(true);
             teleportController.TeleportToStartPosition();
             GamePanelView.Instance.SetHeaderText(textHolder.MenuHeader);
             GamePanelView.Instance.SetDescriptionText(textHolder.MenuTextDescription);

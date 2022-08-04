@@ -10,12 +10,14 @@ public class InputScenarioStep : ScenarioStep
     [SerializeField] private GameObject _inputScenarioHelper;
     [SerializeField] private GameObject _nextActionButton;
     [SerializeField] private GameObject _playerActionEventSender;
+    [SerializeField] private GameObject _watch;
 
     protected override void CheckActions(int number)
     {
       if(number ==0)
         {
             Player.Instance.CanMove = false;
+            _watch.SetActive(false);
             GamePanelView.Instance.SetHeaderText(textHolder.HelloHeader);
             GamePanelView.Instance.SetDescriptionText(textHolder.HelloDescription);
             teleportController.TeleportToStartPosition();
@@ -57,6 +59,7 @@ public class InputScenarioStep : ScenarioStep
             _playerActionEventSender.SetActive(false);
             EndScenarioStepEvent?.Invoke();
         }
+ 
     }
 
 
