@@ -32,7 +32,11 @@ public abstract class ScenarioStep : MonoBehaviour
         {
             textHolder = new TextHolderVr();
             currentSoundPlayer = vrSoundPlayer;
+#if TRUE
+            helpInputObject = FindObjectOfType<OculusHelpInputObject>();
+#else
             helpInputObject = FindObjectOfType<VRHelpInputObject>();
+#endif
         }
 
         textHolder.SetText();

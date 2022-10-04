@@ -11,8 +11,9 @@ public class ColorChanger : MonoBehaviour
     void Awake()
     {
         _baseColor = GetComponent<Renderer>().material.color;
-
+        _baseColor.a = 0;
         _changedColor = Color.green;
+        _changedColor.a = 255;
     }
     void Update()
     {
